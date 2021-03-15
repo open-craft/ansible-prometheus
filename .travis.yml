@@ -19,6 +19,7 @@ services:
 before_install:
   # Pull container.
   - 'sudo docker pull ${distro}:latest'
+  - 'pip install wheel'
 
 script:
   - container_id=$(mktemp)
